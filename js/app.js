@@ -245,8 +245,9 @@
    *   invoke this function expression passing 2 arguments
    *     event, 'light-green'
    */
-   btn13.addEventListener("click", function(){
-
+   btn13.addEventListener("click", function(event){
+    console.log(this);
+    setMyLightClass.bind(this)(event, 'light-green');
    });
 
   /*
