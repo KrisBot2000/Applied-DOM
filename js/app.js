@@ -12,6 +12,7 @@
    * on this dom element, set the className to 'light-green'
    */
    function setMyLightGreen(){
+    console.log(this);
     let lightId = this.dataset.lightId;
     let targetElem = document.getElementById(lightId);
     targetElem.className = "light-green";
@@ -178,7 +179,7 @@
    * using the Function prototype method: bind
    * to set the context to the btn10 object
    */
-   //const setLight10Green =
+   const setLight10Green = setMyLightGreen.bind(btn10);
 
   /*
    * Add a click event listener to btn10
@@ -187,7 +188,7 @@
    * will invoke the setLight10Green function
    */
    btn10.addEventListener("click", function(){
-
+    setLight10Green();
    });
 
   /*
